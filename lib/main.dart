@@ -84,7 +84,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             HomePage(),
+            SizedBox(height: 20),
             SearchBar(),
+            SizedBox(height: 20),
             Third(),
           ],
         )
