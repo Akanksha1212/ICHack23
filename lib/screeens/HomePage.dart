@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 
 class MyWidget extends StatelessWidget {
-  final String imagePath;
-  final String title;
-  final String description;
-
-  MyWidget({this.imagePath, this.title, this.description});
-
   @override
   Widget build(BuildContext context) {
     return Container(
+      // Wrap the widget in a Container for padding and margin
       child: Row(
+        // Use a Row to arrange the widgets in two columns
         children: <Widget>[
           Container(
             width: 100,
             height: 100,
+            // Create a container for the image with a fixed size
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(imagePath),
+                image: AssetImage('images/your_image.png'),
+                // Replace 'images/your_image.png' with your actual image path
                 fit: BoxFit.cover,
               ),
             ),
@@ -27,7 +25,8 @@ class MyWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                title,
+                // The title text
+                'Title',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
@@ -35,7 +34,8 @@ class MyWidget extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                description,
+                // The description text
+                'Description',
                 style: TextStyle(
                   fontSize: 14,
                 ),
