@@ -8,43 +8,72 @@ class Third extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+        ElevatedButton(
+        onPressed: null,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image(
+              image: AssetImage(
+                  'assets/logo.png'), // or AssetImage('assets/image.jpg') for local images
+              height: 100,
+              width: 100,
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Button with Image',
+              style: TextStyle(color: Colors.white),
+            ),
+          ],
+        ),
+      ),
               ElevatedButton(
                 onPressed: null,
-                child: Text('Button 1'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
-                  textStyle: TextStyle(color: Colors.white),
-                  minimumSize: Size(200, 100),
-                ),
-              ),
-              ElevatedButton(
-                onPressed: null,
-                child: Text('Button 2'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
-                  minimumSize: Size(200, 100),
-                  textStyle: TextStyle(color: Colors.white),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image(
+                      image: AssetImage(
+                          'assets/logo.png'), // or AssetImage('assets/image.jpg') for local images
+                      height: 100,
+                      width: 100,
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Button with Image',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
           SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Column(
             children: [
               ElevatedButton(
                 onPressed: null,
-                child: Text('Button 3'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
-                  minimumSize: Size(400, 100),
-                  textStyle: TextStyle(color: Colors.white),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image(
+                      image: AssetImage(
+                          'assets/logo.png'), // or AssetImage('assets/image.jpg') for local images
+                      height: 100,
+                      width: 100,
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Button with Image',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
-        ],
-      ),
+            ],
+          ),
     );
   }
 }
