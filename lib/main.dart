@@ -1,31 +1,71 @@
 import 'package:flutter/material.dart';
 import 'package:terrafire/screeens/Games.dart';
+import 'package:terrafire/screeens/HomePage.dart';
+import 'package:terrafire/screeens/Third.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(MaterialApp(
+    initialRoute: '/',
+    onGenerateRoute: (settings) {
+      switch (settings.name) {
+        case '/':
+          return MaterialPageRoute(builder: (context) => MyApp());
+        case '/home':
+          return MaterialPageRoute(builder: (context) => HomePage());
+        case '/stats':
+          return MaterialPageRoute(builder: (context) => Third());
+        case '/games':
+          return MaterialPageRoute(builder: (context) => Games());
+        // case '/talktodoctor':
+        //   return MaterialPageRoute(builder: (context) => Practice());
+      }
+    },
+    debugShowCheckedModeBanner: false,
+    home: MyApp(),
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
 
-  // This widget is the root of your application.
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      Duration(seconds: 4),
+      () => Navigator.pushReplacementNamed(context, '/home'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+    return Scaffold(
+      body: Container(
+        constraints: BoxConstraints.expand(),
+
+        // decoration: BoxDecoration(color: Color(0xffFBFFE2)),
+        // child: Image.asset('assets/images/logo.png'),
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const [
+            // Image(
+            //   image: AssetImage("assets/"),
+            // ),
+            Image(
+              image: AssetImage("assets/images/logo.png"),
+              width: 370,
+              height: 370,
+            ),
+          ],
+        ),
       ),
-      home: Games(),
     );
   }
 }

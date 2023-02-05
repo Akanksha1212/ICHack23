@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   circular_countdown_timer: ^0.2.3
   rflutter_alert: ^2.0.4
+  google_fonts: ^4.0.3
 
 dev_dependencies:
   flutter_test:
@@ -60,7 +61,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
+  
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
