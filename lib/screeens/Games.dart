@@ -1,5 +1,6 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class Games extends StatefulWidget {
@@ -61,56 +62,181 @@ class _GamesState extends State<Games> {
   List<Widget> _list = <Widget>[
     new Center(
       child: Container(
-        child: Column(
-          children: [
-            listofimages[0].image,
-            Text(listofimages[0].title),
-            Text(listofimages[0].content),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              listofimages[0].image,
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[0].title,
+                style: GoogleFonts.comfortaa(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[0].content,
+                style: GoogleFonts.roboto(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
     new Center(
       child: Container(
-        child: Column(
-          children: [
-            listofimages[1].image,
-            Text(listofimages[1].title),
-            Text(listofimages[1].content),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              listofimages[1].image,
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[1].title,
+                style: GoogleFonts.comfortaa(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[1].content,
+                style: GoogleFonts.roboto(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
     Center(
       child: Container(
-        child: Column(
-          children: [
-            listofimages[2].image,
-            Text(listofimages[2].title),
-            Text(listofimages[2].content),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              listofimages[2].image,
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[2].title,
+                style: GoogleFonts.comfortaa(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[2].content,
+                style: GoogleFonts.roboto(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
     new Center(
       child: Container(
-        child: Column(
-          children: [
-            listofimages[3].image,
-            Text(listofimages[3].title),
-            Text(listofimages[3].content),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              listofimages[3].image,
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[3].title,
+                style: GoogleFonts.comfortaa(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[3].content,
+                style: GoogleFonts.roboto(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
     new Center(
       child: Container(
-        child: Column(
-          children: [
-            listofimages[4].image,
-            Text(listofimages[4].title),
-            Text(listofimages[4].content)
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              listofimages[4].image,
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[4].title,
+                style: GoogleFonts.comfortaa(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                listofimages[4].content,
+                style: GoogleFonts.roboto(
+                  textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 47, 47, 47),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     )
@@ -148,13 +274,13 @@ class _GamesState extends State<Games> {
               child: Column(
                 children: [
                   CircularCountDownTimer(
-                    width: MediaQuery.of(context).size.width / 3,
-                    height: MediaQuery.of(context).size.height / 3,
+                    width: MediaQuery.of(context).size.width / 3.5,
+                    height: MediaQuery.of(context).size.height / 3.5,
                     duration: 14,
                     fillColor: Colors.amber,
                     controller: _controller,
                     backgroundColor: Colors.white54,
-                    strokeWidth: 10.0,
+                    strokeWidth: 15.0,
                     strokeCap: StrokeCap.round,
                     isTimerTextShown: true,
                     isReverse: false,
