@@ -165,7 +165,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  Navigator.pushNamed(context, "/games");
+                  Navigator.pushNamed(context, "/gamehome");
                 },
               ),
             ),
