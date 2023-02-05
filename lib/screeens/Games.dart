@@ -2,8 +2,6 @@ import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-import 'CountDown.dart';
-
 class Games extends StatefulWidget {
   const Games({super.key});
 
@@ -14,23 +12,43 @@ class Games extends StatefulWidget {
 class ImageList {
   late final String title;
   late final Image image;
+  late final String content;
 
   ImageList({
     required this.title,
     required this.image,
+    required this.content,
   });
 }
 
 final List<ImageList> listofimages = [
-  ImageList(title: "title", image: Image.asset("assets/images/excercise1.gif")),
   ImageList(
-      title: "title1", image: Image.asset("assets/images/excercise2.gif")),
+      title: "Tongue Push Up",
+      image: Image.asset(
+        "assets/images/TongueUp.GIF",
+      ),
+      content:
+          "Open your mouth slightly and suck your tongue upwards.\nPress your entire tongue into the roof of your mouth."),
   ImageList(
-      title: "title2", image: Image.asset("assets/images/excercise1.gif")),
+      title: "Tongue Curler",
+      image: Image.asset("assets/images/TongueCurler.GIF"),
+      content:
+          "Open your mouth slightly and push the tip of your tongue against the roof of your mouth.\nSlide your tongue as far back as it will go.\nHold your tonque in this position for 1 second and then slide it back towards the front of your mouth."),
   ImageList(
-      title: "title3", image: Image.asset("assets/images/excercise2.gif")),
+      title: "Soft Palate Raise",
+      image: Image.asset("assets/images/Mouth.GIF"),
+      content:
+          "Open your mouth wide and contract the muscles at the back of your throat.\nTry to create lots of space in your mouth by lifting your soft palate.\nHold your soft palate in this raised position for 1 second."),
   ImageList(
-      title: "title4", image: Image.asset("assets/images/excercise2.gif")),
+      title: "Chewing",
+      image: Image.asset("assets/images/Chew.GIF"),
+      content:
+          "Close your mouth and slightly suck in your cheeks.\nImagine you are eating something chewy and work on it for 30 seconds on your right side.\nMove the imaginary food over to the left with your tongue and repeat for another 30 seconds."),
+  ImageList(
+      title: "Tongue Press Down",
+      image: Image.asset("assets/images/TongueDown.GIF"),
+      content:
+          "Open your mouth and press the tip of your tongue against the back of your bottom teeth.\nPush your entire tongue down into the floor of your mouth."),
 ];
 var index = 0;
 
@@ -45,13 +63,9 @@ class _GamesState extends State<Games> {
       child: Container(
         child: Column(
           children: [
-            ListTile(
-              leading: SizedBox(
-                child: listofimages[0].image,
-                height: 100,
-                width: 100,
-              ),
-            ),
+            listofimages[0].image,
+            Text(listofimages[0].title),
+            Text(listofimages[0].content),
           ],
         ),
       ),
@@ -60,13 +74,9 @@ class _GamesState extends State<Games> {
       child: Container(
         child: Column(
           children: [
-            ListTile(
-              leading: SizedBox(
-                child: listofimages[1].image,
-                height: 100,
-                width: 100,
-              ),
-            ),
+            listofimages[1].image,
+            Text(listofimages[1].title),
+            Text(listofimages[1].content),
           ],
         ),
       ),
@@ -75,13 +85,9 @@ class _GamesState extends State<Games> {
       child: Container(
         child: Column(
           children: [
-            ListTile(
-              leading: SizedBox(
-                child: listofimages[2].image,
-                height: 100,
-                width: 100,
-              ),
-            ),
+            listofimages[2].image,
+            Text(listofimages[2].title),
+            Text(listofimages[2].content),
           ],
         ),
       ),
@@ -90,14 +96,20 @@ class _GamesState extends State<Games> {
       child: Container(
         child: Column(
           children: [
-            ListTile(
-              leading: SizedBox(
-                child: listofimages[3].image,
-                height: 100,
-                width: 100,
-              ),
-              title: Text(listofimages[index].title),
-            ),
+            listofimages[3].image,
+            Text(listofimages[3].title),
+            Text(listofimages[3].content),
+          ],
+        ),
+      ),
+    ),
+    new Center(
+      child: Container(
+        child: Column(
+          children: [
+            listofimages[4].image,
+            Text(listofimages[4].title),
+            Text(listofimages[4].content)
           ],
         ),
       ),
@@ -112,12 +124,12 @@ class _GamesState extends State<Games> {
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height / 3,
-              decoration: BoxDecoration(
-                  color: const Color(0xff5964b3),
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(35),
-                      bottomRight: Radius.circular(35))),
+              height: MediaQuery.of(context).size.height / 2,
+              // decoration: BoxDecoration(
+              //     color: const Color(0xff5964b3),
+              //     borderRadius: BorderRadius.only(
+              //         bottomLeft: Radius.circular(35),
+              //         bottomRight: Radius.circular(35))),
               child: PageView(
                 children: _list,
                 scrollDirection: Axis.horizontal,
@@ -136,8 +148,8 @@ class _GamesState extends State<Games> {
               child: Column(
                 children: [
                   CircularCountDownTimer(
-                    width: MediaQuery.of(context).size.width / 2,
-                    height: MediaQuery.of(context).size.height / 2,
+                    width: MediaQuery.of(context).size.width / 3,
+                    height: MediaQuery.of(context).size.height / 3,
                     duration: 14,
                     fillColor: Colors.amber,
                     controller: _controller,
