@@ -13,12 +13,12 @@ What it does
 - Uses TerraAPI to livestream the data to get the values for the breathing rate and then the program will calculate the AHI to diagnose whether a patient has sleep apnea or not 
 
 What could come next 
-- We could use other contributing factors such as ECG, age, gender, weight and height to give alerts to individuals who are at a higher riak
+- We could use other contributing factors such as ECG, age, gender, weight and height to give alerts to individuals who are at a higher risk
 
 Challenges
 - Generated our own data from the TerraAPI documentation
 - Were not able to connect to a TerraAPI variable to livestream the data
--
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
