@@ -31,15 +31,22 @@ class HomePage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Center(
-                        child: CircleAvatar(
-                          backgroundColor: Color.fromARGB(58, 255, 255, 255),
-                          radius: 35,
-                          child: Text(
-                            'Vi',
-                            style: TextStyle(fontSize: 25, color: Colors.white),
-                          ), //Text
-                        ), //CircleAva
+                      GestureDetector(
+                        child: Center(
+                          child: CircleAvatar(
+                            backgroundColor: Color.fromARGB(58, 255, 255, 255),
+                            radius: 35,
+                            child: Text(
+                              'Vi',
+                              style:
+                                  TextStyle(fontSize: 25, color: Colors.white),
+                            ), //Text
+                          ),
+                          //CircleAva
+                        ),
+                        onTap: () {
+                          Navigator.pushNamed(context, "/profile");
+                        },
                       ),
                     ],
                   ),

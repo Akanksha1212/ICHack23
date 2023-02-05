@@ -3,38 +3,39 @@ import 'package:flutter/material.dart';
 class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Health App'),
-        ),
-        body: DefaultTabController(
-          length: 3,
-          child: Column(
-            children: [
-              Container(
-                color: Colors.blue,
-                constraints: BoxConstraints.expand(height: 50),
-                child: TabBar(
-                  labelColor: Colors.white,
-                  tabs: [
-                    Tab(text: 'Last Night'),
-                    Tab(text: 'This Week'),
-                    Tab(text: 'This Month'),
-                  ],
-                ),
+    return Scaffold(
+      backgroundColor: Color(0xfffff8d1),
+      body: DefaultTabController(
+        length: 3,
+        child: Column(
+          children: [
+            Image.asset(
+              "assets/images/womenslee.png",
+              height: 350,
+              width: 350,
+            ),
+            Container(
+              color: Color(0xffddeafb),
+              constraints: BoxConstraints.expand(height: 50),
+              child: TabBar(
+                labelColor: Color.fromARGB(255, 11, 37, 71),
+                tabs: [
+                  Tab(text: 'Last Night'),
+                  Tab(text: 'This Week'),
+                  Tab(text: 'This Month'),
+                ],
               ),
-              Expanded(
-                child: TabBarView(
-                  children: [
-                    LastNightPage(),
-                    ThisWeekPage(),
-                    ThisMonthPage(),
-                  ],
-                ),
+            ),
+            Expanded(
+              child: TabBarView(
+                children: [
+                  LastNightPage(),
+                  ThisWeekPage(),
+                  ThisMonthPage(),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

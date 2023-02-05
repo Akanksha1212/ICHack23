@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:terrafire/screeens/Dashboard.dart';
 import 'package:terrafire/screeens/Games.dart';
 import 'package:terrafire/screeens/HomePage.dart';
+import 'package:terrafire/screeens/Profile.dart';
 import 'package:terrafire/screeens/Third.dart';
 import 'package:terrafire/screeens/ChatBot.dart';
 
@@ -20,6 +21,8 @@ Future<void> main() async {
           return MaterialPageRoute(builder: (context) => Dashboard());
         case '/games':
           return MaterialPageRoute(builder: (context) => Games());
+        case '/profile':
+          return MaterialPageRoute(builder: (context) => Profile());
         // case '/talktodoctor':
         //   return MaterialPageRoute(builder: (context) => Practice());
       }
