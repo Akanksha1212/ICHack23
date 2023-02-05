@@ -19,15 +19,9 @@ Challenges
 - Generated our own data from the TerraAPI documentation.
 - Were not able to connect to a TerraAPI variable to livestream the data.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Screenshots
+<pre>
+<img src="Screenshots/Home.png" width="250"> <img src="Screenshots/Dashboard1.png" width="250"> <img src="Screenshots/excercise.png" width="250"> <img src="Screenshots/breathe1.png" width="250"> <img src="Screenshots/breathe2.png" width="250"> <img src="Screenshots/Chatbot.png" width="250"> <img src="Screenshots/4square.png" > 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</pre>
