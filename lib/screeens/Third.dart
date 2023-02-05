@@ -15,7 +15,7 @@ class Third extends StatelessWidget {
           children: [
             Image(
               image: AssetImage(
-                  'assets/logo.png'), // or AssetImage('assets/image.jpg') for local images
+                  'assets/images/logo.png'), // or AssetImage('assets/image.jpg') for local images
               height: 100,
               width: 100,
             ),
@@ -34,7 +34,7 @@ class Third extends StatelessWidget {
                   children: [
                     Image(
                       image: AssetImage(
-                          'assets/logo.png'), // or AssetImage('assets/image.jpg') for local images
+                          'assets/images/logo.png'), // or AssetImage('assets/image.jpg') for local images
                       height: 100,
                       width: 100,
                     ),
@@ -58,7 +58,7 @@ class Third extends StatelessWidget {
                   children: [
                     Image(
                       image: AssetImage(
-                          'assets/logo.png'), // or AssetImage('assets/image.jpg') for local images
+                          'assets/images/logo.png'), // or AssetImage('assets/image.jpg') for local images
                       height: 100,
                       width: 100,
                     ),
