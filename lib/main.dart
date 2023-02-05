@@ -35,8 +35,8 @@ Future<void> main() async {
             return MaterialPageRoute(builder: (context) => VideoPlayerScreen());
           case '/result':
             return MaterialPageRoute(builder: (context) => Result());
-          // case '/talktodoctor':
-          //   return MaterialPageRoute(builder: (context) => Practice());
+          case '/talktodoctor':
+            return MaterialPageRoute(builder: (context) => ChatBot());
         }
       },
       debugShowCheckedModeBanner: false,
