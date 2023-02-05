@@ -44,6 +44,7 @@ dependencies:
   video_player: ^2.5.1
   noise_meter: ^3.1.0
   fl_chart: ^0.30.0
+  dialog_flowtter:
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/dialog_flow_auth.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
