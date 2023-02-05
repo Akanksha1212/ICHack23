@@ -126,7 +126,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      Navigator.pushNamed(context, "/stats");
+                      Navigator.pushNamed(context, "/talktodoctor");
                     },
                   ),
                 ),
