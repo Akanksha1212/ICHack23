@@ -36,48 +36,50 @@ class _GamesState extends State<Games> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfffff8d1),
       body: SafeArea(
         child: Column(
           children: [
-            Expanded(
+            Container(
+              height: MediaQuery.of(context).size.height / 3,
+              decoration: BoxDecoration(
+                  color: const Color(0xff5964b3),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(35),
+                      bottomRight: Radius.circular(35))),
               child: Container(
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.white,
-                  ),
-                  color: Colors.white,
-                  borderRadius: const BorderRadius.only(
-                    topLeft: const Radius.circular(20),
-                    topRight: const Radius.circular(20),
-                  ),
-                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: ListTile(
-                        leading: SizedBox(
-                          child: listofimages[index].image,
-                          height: 100,
-                          width: 100,
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: ListTile(
+                          leading: SizedBox(
+                            child: listofimages[index].image,
+                            height: 100,
+                            width: 100,
+                          ),
+                          title: Text(listofimages[index].title),
+                          onTap: () {
+                            setState(() {
+                              if (index <= 4) index++;
+                              if (index > 4) index = 0;
+                            });
+                          },
                         ),
-                        title: Text(listofimages[index].title),
-                        onTap: () {
-                          setState(() {
-                            if (index <= 4) index++;
-                            if (index > 4) index = 0;
-                          });
-                        },
                       ),
-                    ),
-                    SizedBox(
-                      child: Countdown(),
-                      height: 200,
-                      width: 200,
                     ),
                   ],
                 ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: SizedBox(
+                child: Countdown(),
+                height: 200,
+                width: 200,
               ),
             ),
           ],
