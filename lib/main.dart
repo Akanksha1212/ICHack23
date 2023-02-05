@@ -6,6 +6,7 @@ import 'package:terrafire/screeens/GameHome.dart';
 import 'package:terrafire/screeens/Games.dart';
 import 'package:terrafire/screeens/HomePage.dart';
 import 'package:terrafire/screeens/Profile.dart';
+import 'package:terrafire/screeens/Report.dart';
 import 'package:terrafire/screeens/Result.dart';
 import 'package:terrafire/screeens/Third.dart';
 import 'package:terrafire/screeens/ChatBot.dart';
@@ -24,7 +25,7 @@ Future<void> main() async {
           case '/home':
             return MaterialPageRoute(builder: (context) => HomePage());
           case '/stats':
-            return MaterialPageRoute(builder: (context) => Dashboard());
+            return MaterialPageRoute(builder: (context) => HealthReport());
           case '/games':
             return MaterialPageRoute(builder: (context) => Games());
           case '/profile':
